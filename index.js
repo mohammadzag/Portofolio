@@ -204,11 +204,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     printLine('  - Email: <a href="mailto:mohzag615@gmail.com" class="text-green">mohzag615@gmail.com</a>');
                     printLine('  - Phone: +962 799919621');
                     printLine('  - Location: Tafilah, Jordan');
-                    printLine('  - LinkedIn: <a href="https://linkedin.com/in/mohammad-al-zaghameem" target="_blank" class="text-green">linkedin.com/in/mohammad-al-zaghameem</a>');
+                    printLine('  - LinkedIn: <a href="https://www.linkedin.com/in/mohammad-zaghameem-0b01511b6" target="_blank" class="text-green">linkedin.com/in/mohammad-zaghameem-0b01511b6</a>');
                     break;
                 case 'cv':
                     printLine('Payload: mohammad_cv.pdf');
-                    printLine('<a href="assets/mohammad_cv.pdf?v=2.5" download class="text-green"><i class="fa-solid fa-file-arrow-down"></i> [CLICK TO DOWNLOAD RESUME]</a>');
+                    printLine('<a href="assets/mohammad_cv.pdf?v=2.6" download class="text-green"><i class="fa-solid fa-file-arrow-down"></i> [CLICK TO DOWNLOAD RESUME]</a>');
                     break;
                 case 'clear':
                     terminalOutput.innerHTML = '';
