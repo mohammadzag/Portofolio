@@ -1,0 +1,19 @@
+# Ignore local Python scratch scripts
+scratch/
+__pycache__/
+
+# Ignore original CV document sources (optional, keep private if desired)
+*.docx
+*.xlsx
+Commitment form - Jan 2026 template.pdf
+TA.pdf
+certificates/
+
+# Only keep static web files
+!assets/
+!index.html
+!index.css
+!index.js
+!assets/mohammad_cv.pdf
+!assets/profile.jpg
+!assets/certificates/

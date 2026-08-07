@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mohammad Al-Zaghameem - Cybersecurity Graduate, Junior SOC Analyst, DFIR Analyst, and Junior Security Engineer. Professional portfolio showcasing digital forensics, network security, and infrastructure risk analysis.">
+    <meta name="keywords" content="Cybersecurity, SOC Analyst, Digital Forensics, DFIR, Network Security, Tafila Technical University, Mohammad Al-Zaghameem, Portfolio, JCC">
+    <meta name="author" content="Mohammad Al-Zaghameem">
+    <meta property="og:title" content="Mohammad Al-Zaghameem | Cybersecurity Portfolio">
+    <meta property="og:description" content="Explore my projects in Digital Forensics, Infrastructure Risk Analysis, and virtual lab building, along with professional certifications and training.">
+    <meta property="og:image" content="assets/profile.jpg">
+    <meta property="og:type" content="website">
+    <title>Mohammad Al-Zaghameem | Cybersecurity Portfolio</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- Cyber Background Grid Layer -->
+    <div class="cyber-grid"></div>
+    <div class="cyber-scanline"></div>
+
+    <!-- Navigation Header -->
+    <header class="header" id="header">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-accent">&lt;</span>M.ZAGHAMEEM<span class="logo-accent"> /&gt;</span>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active-link"><i class="fa-solid fa-house-terminal"></i> Home</a></li>
+                    <li><a href="#about" class="nav-link"><i class="fa-solid fa-shield-halved"></i> About</a></li>
+                    <li><a href="#experience" class="nav-link"><i class="fa-solid fa-timeline"></i> Experience</a></li>
+                    <li><a href="#skills" class="nav-link"><i class="fa-solid fa-brain"></i> Skills</a></li>
+                    <li><a href="#projects" class="nav-link"><i class="fa-solid fa-code-branch"></i> Projects</a></li>
+                    <li><a href="#certifications" class="nav-link"><i class="fa-solid fa-award"></i> Certifications</a></li>
+                    <li><a href="#contact" class="nav-link"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="assets/mohammad_cv.pdf" class="btn btn-outline" download="Mohammad_Al-Zaghameem_CV.pdf">
+                    <i class="fa-solid fa-file-pdf"></i> Resume
+                </a>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="main">
+
+        <!-- Hero Section -->
+        <section class="home section" id="home">
+            <div class="home-container container grid">
+                
+                <div class="home-data">
+                    <div class="badge-status">
+                        <span class="status-dot"></span> Active Threat Hunting
+                    </div>
+                    <h1 class="home-title">Mohammad Al-Zaghameem</h1>
+                    <h2 class="home-subtitle">
+                        <span class="typewriter" data-words='["Cybersecurity Specialist", "Junior SOC Analyst", "DFIR Analyst", "Junior Security Engineer"]'></span><span class="cursor">|</span>
+                    </h2>
+                    <p class="home-description">
+                        Cybersecurity graduate from Tafila Technical University. Specializing in threat analysis, digital forensics, network security, and secure infrastructure. Experienced in simulated incident response, automated Python security scripting, and technical mentoring.
+                    </p>
+                    <div class="home-social">
+                        <a href="https://linkedin.com/in/mohammad-al-zaghameem" target="_blank" class="social-icon" aria-label="LinkedIn Profile"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://github.com/Dalcots" target="_blank" class="social-icon" aria-label="GitHub Profile"><i class="fa-brands fa-github"></i></a>
+                        <a href="mailto:mohzag615@gmail.com" class="social-icon" aria-label="Send Email"><i class="fa-solid fa-envelope"></i></a>
+                        <a href="tel:+962799919621" class="social-icon" aria-label="Call Phone"><i class="fa-solid fa-phone"></i></a>
+                    </div>
+                    <div class="home-buttons">
+                        <a href="#contact" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Contact Me</a>
+                        <a href="#projects" class="btn btn-secondary"><i class="fa-solid fa-code"></i> View Work</a>
+                    </div>
+                </div>
+
+                <div class="home-display">
+                    <!-- Profile Picture with Cyber Glow -->
+                    <div class="profile-frame">
+                        <div class="profile-glow"></div>
+                        <img src="assets/profile.jpg" alt="Mohammad Al-Zaghameem Profile Photo" class="profile-img">
+                    </div>
+
+                    <!-- Interactive Cybersecurity Terminal -->
+                    <div class="terminal-widget">
+                        <div class="terminal-header">
+                            <span class="terminal-btn red"></span>
+                            <span class="terminal-btn yellow"></span>
+                            <span class="terminal-btn green"></span>
+                            <span class="terminal-title">guest@mz-cyber-core:~</span>
+                        </div>
+                        <div class="terminal-body" id="terminal-body">
+                            <div class="terminal-line text-green">Type 'help' to view available secure commands.</div>
+                            <div class="terminal-output" id="terminal-output">
+                                <div class="terminal-line"><span class="prompt">guest@mz-cyber-core:~$</span> system_init --verbose</div>
+                                <div class="terminal-line text-dim">Initializing security modules... Done.</div>
+                                <div class="terminal-line text-dim">Loading CV data matrix... Done.</div>
+                                <div class="terminal-line text-green">System status: SECURE. No anomalies detected.</div>
+                            </div>
+                            <div class="terminal-input-line">
+                                <span class="prompt">guest@mz-cyber-core:~$</span>
+                                <input type="text" class="terminal-input" id="terminal-input" placeholder="" autofocus autocomplete="off" spellcheck="false">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- About & Education Section -->
+        <section class="about section" id="about">
+            <h2 class="section-title">About Me</h2>
+            <span class="section-subtitle">Profile & Academic Foundations</span>
+
+            <div class="about-container container grid">
+                <div class="about-card glass-card">
+                    <div class="card-icon"><i class="fa-solid fa-shield-heart text-green"></i></div>
+                    <h3>My Mission</h3>
+                    <p>
+                        I bridge the gap between rigorous cybersecurity standards and modern computational infrastructure. My training with the National Cybersecurity Center (NCSC) gave me real-world insights into critical national infrastructure (CNI) defense and real-time incident response. I'm highly motivated to protect organization networks, isolate active threat actors, and conduct digital forensic timeline reconstruction.
+                    </p>
+                </div>
+
+                <div class="about-card glass-card">
+                    <div class="card-icon"><i class="fa-solid fa-graduation-cap text-green"></i></div>
+                    <h3>Education</h3>
+                    <h4>Bachelor of Science in Cybersecurity</h4>
+                    <p class="school-name">Tafila Technical University (TTU) — Tafila, Jordan</p>
+                    <p class="graduation-date"><i class="fa-solid fa-calendar-days"></i> Expected Graduation: August 2026</p>
+                    <div class="coursework">
+                        <h5>Key Coursework</h5>
+                        <div class="course-badges">
+                            <span class="course-badge">Infrastructure Security</span>
+                            <span class="course-badge">Network Security</span>
+                            <span class="course-badge">Operating Systems</span>
+                            <span class="course-badge">Cryptography</span>
+                            <span class="course-badge">Digital Forensics</span>
+                            <span class="course-badge">Database Security</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="experience section" id="experience">
+            <h2 class="section-title">Professional Experience</h2>
+            <span class="section-subtitle">Milestones in Cyber Operations and Mentorship</span>
+
+            <div class="experience-container container">
+                <div class="timeline">
+                    
+                    <!-- Timeline Item 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <div class="timeline-content glass-card scroll-reveal">
+                            <span class="timeline-date">2025</span>
+                            <h3 class="timeline-role">Cybersecurity Trainee</h3>
+                            <h4 class="timeline-company">National Cybersecurity Center (NCSC) <span class="company-loc">| Amman, Jordan</span></h4>
+                            <p class="timeline-desc">
+                                Participated in intensive security operations training focused on Critical National Infrastructure (CNI) defense and incident response protocols.
+                            </p>
+                            <ul class="timeline-points">
+                                <li>Acquired hands-on experience in threat hunting, real-time threat evaluation, vulnerability assessments, and mitigation.</li>
+                                <li>Monitored live network traffic matrices using enterprise security monitoring tools to detect and isolate anomalous Active Directory and endpoint footprints.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <i class="fa-solid fa-chalkboard-user"></i>
+                        </div>
+                        <div class="timeline-content glass-card scroll-reveal">
+                            <span class="timeline-date">2024 — 2026</span>
+                            <h3 class="timeline-role">Undergraduate Teaching Assistant</h3>
+                            <h4 class="timeline-company">Tafila Technical University <span class="company-loc">| Tafila, Jordan</span></h4>
+                            <p class="timeline-desc">
+                                Coordinated alongside engineering faculty to deliver laboratory exercises, classroom instruction, and objective grading rubrics.
+                            </p>
+                            <ul class="timeline-points">
+                                <li>Facilitated hands-on experiments for core academic tracks including Operating Systems (Linux administration, process structures, shell automation), Artificial Intelligence, and Discrete Mathematics (cryptographic logic structures).</li>
+                                <li>Provided personalized technical troubleshooting and mentorship to over 100 students navigating complex network configurations.</li>
+                            </ul>
+                            <a href="https://drive.google.com/file/d/1bM5O8yuzZcZbu1r3CI7-i-38e5yR0klt/view?usp=drive_link" target="_blank" class="btn-text text-green"><i class="fa-solid fa-circle-check"></i> View Work Verification Document</a>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 3 -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <i class="fa-solid fa-network-wired"></i>
+                        </div>
+                        <div class="timeline-content glass-card scroll-reveal">
+                            <span class="timeline-date">2024 — Present</span>
+                            <h3 class="timeline-role">Co-Founder</h3>
+                            <h4 class="timeline-company">Jordan Cybersecurity Club (JCC) Platform <span class="company-loc">| Jordan</span></h4>
+                            <p class="timeline-desc">
+                                Co-established a collaborative academic-to-industry bridging network to align university curricula with practical security sector skills.
+                            </p>
+                            <ul class="timeline-points">
+                                <li>Organized and hosted community-driven digital literacy workshops, local Capture the Flag (CTF) events, and secure coding bootcamps.</li>
+                                <li>Developed curricula and taught specialized, hands-on courses on Python programming and the fundamentals of Cybersecurity.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills section" id="skills">
+            <h2 class="section-title">Technical Skills</h2>
+            <span class="section-subtitle">Proficiencies & Security Toolkit</span>
+
+            <div class="skills-container container grid">
+                
+                <!-- Category 1 -->
+                <div class="skills-card glass-card scroll-reveal">
+                    <h3 class="skills-heading"><i class="fa-solid fa-crosshairs text-green"></i> Security & Forensics</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-name">Digital Forensics (Autopsy, FTK Imager)</div>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Threat Hunting & OSINT</div>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 80%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Network Analysis (Wireshark, Nmap)</div>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Penetration Testing (Kali Linux, Metasploit)</div>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 75%;"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 2 -->
+                <div class="skills-card glass-card scroll-reveal">
+                    <h3 class="skills-heading"><i class="fa-solid fa-server text-green"></i> Systems & Networking</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-name">Linux Administration (Ubuntu, Fedora, Manjaro)</div>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">TCP/IP & Network Security Policies</div>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 88%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Windows Server & Active Directory</div>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 70%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Virtualization & Containerization (Docker)</div>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 80%;"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 3 -->
+                <div class="skills-card glass-card scroll-reveal">
+                    <h3 class="skills-heading"><i class="fa-solid fa-laptop-code text-green"></i> Programming & IoT</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-name">Python (Security Scripting & Automation)</div>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 88%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">C++ Programming</div>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 75%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Microelectronics & Simulation (ESP32)</div>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 70%;"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 4 -->
+                <div class="skills-card glass-card scroll-reveal">
+                    <h3 class="skills-heading"><i class="fa-solid fa-users text-green"></i> Leadership & Training</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-name">Technical Instruction & Training</div>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Curriculum Development</div>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Public Speaking & Presenting</div>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 80%;"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects section" id="projects">
+            <h2 class="section-title">Technical Projects</h2>
+            <span class="section-subtitle">Real-World Case Studies & Simulators</span>
+
+            <div class="projects-container container">
+                
+                <!-- Project Filter Tags -->
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="forensics">Forensics</button>
+                    <button class="filter-btn" data-filter="risk-analysis">Risk Analysis</button>
+                    <button class="filter-btn" data-filter="systems">Systems</button>
+                </div>
+
+                <div class="projects-grid grid">
+                    
+                    <!-- Project 1 -->
+                    <div class="project-card glass-card scroll-reveal" data-category="forensics">
+                        <div class="project-header">
+                            <span class="project-tag"><i class="fa-solid fa-magnifying-glass-chart"></i> Forensics</span>
+                            <div class="project-links">
+                                <span class="project-icon-local"><i class="fa-solid fa-fingerprint"></i></span>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Digital Forensics Insider Threat Investigation</h3>
+                        <p class="project-desc">
+                            Conducted a mock threat investigation of a compromised endpoint to isolate evidence of data exfiltration by an insider. Acquired raw disk images, parsed logs, and constructed timelines.
+                        </p>
+                        <div class="project-tech">
+                            <span>FTK Imager</span>
+                            <span>Autopsy</span>
+                            <span>Registry Parser</span>
+                            <span>Event Logs</span>
+                            <span>Prefetch</span>
+                        </div>
+                        <button class="btn btn-secondary btn-sm btn-project-detail" data-project="insider-threat"><i class="fa-solid fa-circle-info"></i> Details</button>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card glass-card scroll-reveal" data-category="risk-analysis">
+                        <div class="project-header">
+                            <span class="project-tag"><i class="fa-solid fa-triangle-exclamation"></i> Risk Analysis</span>
+                            <div class="project-links">
+                                <span class="project-icon-local"><i class="fa-solid fa-lock"></i></span>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Secure E-Commerce Infrastructure Risk Analysis</h3>
+                        <p class="project-desc">
+                            Performed a comprehensive risk assessment of a simulated e-commerce web application, threat modeling attack vectors. Designed segmentation controls, backups, and security baselines.
+                        </p>
+                        <div class="project-tech">
+                            <span>Threat Modeling</span>
+                            <span>OWASP Top 10</span>
+                            <span>WAF Controls</span>
+                            <span>Network Segmentation</span>
+                        </div>
+                        <button class="btn btn-secondary btn-sm btn-project-detail" data-project="ecommerce-risk"><i class="fa-solid fa-circle-info"></i> Details</button>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card glass-card scroll-reveal" data-category="systems">
+                        <div class="project-header">
+                            <span class="project-tag"><i class="fa-solid fa-cubes"></i> Systems & Labs</span>
+                            <div class="project-links">
+                                <a href="https://github.com/Dalcots/EduKernel-Suite" target="_blank" class="project-link-icon" aria-label="GitHub Repository"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">EduKernel-Suite</h3>
+                        <p class="project-desc">
+                            Built a multi-image virtual cybersecurity laboratory designed for academic training. Configured network virtualization and containerized environments to simulate multi-host defense.
+                        </p>
+                        <div class="project-tech">
+                            <span>Docker</span>
+                            <span>Network Virtualization</span>
+                            <span>Linux Kernel</span>
+                            <span>Shell Scripting</span>
+                        </div>
+                        <a href="https://github.com/Dalcots/EduKernel-Suite" target="_blank" class="btn btn-secondary btn-sm"><i class="fa-solid fa-arrow-up-right-from-square"></i> Code</a>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="project-card glass-card scroll-reveal" data-category="systems">
+                        <div class="project-header">
+                            <span class="project-tag"><i class="fa-solid fa-wrench"></i> Security Tools</span>
+                            <div class="project-links">
+                                <a href="https://github.com/mohammadzag/MHZTools" target="_blank" class="project-link-icon" aria-label="GitHub Repository"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">MHZTools</h3>
+                        <p class="project-desc">
+                            A collection of custom automated cybersecurity utilities and systems administration tools designed to streamline security configurations and audit tasks.
+                        </p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Automation</span>
+                            <span>System Auditing</span>
+                            <span>Scripting</span>
+                        </div>
+                        <a href="https://github.com/mohammadzag/MHZTools" target="_blank" class="btn btn-secondary btn-sm"><i class="fa-solid fa-arrow-up-right-from-square"></i> Code</a>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="project-card glass-card scroll-reveal" data-category="systems">
+                        <div class="project-header">
+                            <span class="project-tag"><i class="fa-solid fa-screwdriver-wrench"></i> System Utilities</span>
+                            <div class="project-links">
+                                <a href="https://github.com/mohammadzag/GravityUtilities_" target="_blank" class="project-link-icon" aria-label="GitHub Repository"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">GravityUtilities_</h3>
+                        <p class="project-desc">
+                            A lightweight suite of utility helper scripts and administration modules designed to automate system setup, optimize system performance metrics, and handle file system automation.
+                        </p>
+                        <div class="project-tech">
+                            <span>PowerShell</span>
+                            <span>System Automation</span>
+                            <span>Task Management</span>
+                            <span>Scripting</span>
+                        </div>
+                        <a href="https://github.com/mohammadzag/GravityUtilities_" target="_blank" class="btn btn-secondary btn-sm"><i class="fa-solid fa-arrow-up-right-from-square"></i> Code</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section class="certifications section" id="certifications">
+            <h2 class="section-title">Certifications & Credentials</h2>
+            <span class="section-subtitle">Industry-Validated Qualifications</span>
+
+            <div class="certifications-container container">
+                
+                <!-- Main Grid -->
+                <div class="certs-grid grid">
+                    
+                    <!-- Cert 1 -->
+                    <div class="cert-card glass-card scroll-reveal">
+                        <div class="cert-badge-icon"><i class="fa-solid fa-microchip"></i></div>
+                        <div class="cert-info">
+                            <h3 class="cert-name">Cybersecurity Fundamentals Certification</h3>
+                            <p class="cert-issuer">Microsoft</p>
+                        </div>
+                        <div class="cert-actions">
+                            <button class="btn btn-outline btn-sm open-gallery" data-cert-index="0"><i class="fa-solid fa-image"></i> View Document</button>
+                        </div>
+                    </div>
+
+                    <!-- Cert 2 -->
+                    <div class="cert-card glass-card scroll-reveal">
+                        <div class="cert-badge-icon"><i class="fa-solid fa-chalkboard"></i></div>
+                        <div class="cert-info">
+                            <h3 class="cert-name">Trainer of Trainers (ToT) Professional Certificate</h3>
+                            <p class="cert-issuer">Technical & Vocational Skills Development Commission</p>
+                        </div>
+                        <div class="cert-actions">
+                            <button class="btn btn-outline btn-sm open-gallery" data-cert-index="1"><i class="fa-solid fa-image"></i> View Document</button>
+                        </div>
+                    </div>
+
+                    <!-- Cert 3 -->
+                    <div class="cert-card glass-card scroll-reveal">
+                        <div class="cert-badge-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                        <div class="cert-info">
+                            <h3 class="cert-name">Defensive Security & Threat Hunting Paths</h3>
+                            <p class="cert-issuer">TryHackMe</p>
+                        </div>
+                        <div class="cert-actions">
+                            <button class="btn btn-outline btn-sm open-gallery" data-cert-index="2"><i class="fa-solid fa-image"></i> View Document</button>
+                        </div>
+                    </div>
+
+                    <!-- Cert 4 -->
+                    <div class="cert-card glass-card scroll-reveal">
+                        <div class="cert-badge-icon"><i class="fa-solid fa-keyboard"></i></div>
+                        <div class="cert-info">
+                            <h3 class="cert-name">Data Entry Certification</h3>
+                            <p class="cert-issuer">Education for Employment in Jordan (EFE-Jordan)</p>
+                        </div>
+                        <div class="cert-actions">
+                            <button class="btn btn-outline btn-sm open-gallery" data-cert-index="3"><i class="fa-solid fa-image"></i> View Document</button>
+                        </div>
+                    </div>
+
+                    <!-- Cert 5 -->
+                    <div class="cert-card glass-card scroll-reveal">
+                        <div class="cert-badge-icon"><i class="fa-solid fa-network-wired"></i></div>
+                        <div class="cert-info">
+                            <h3 class="cert-name">Advanced Computer Networking Specialist</h3>
+                            <p class="cert-issuer">Academic Accreditation</p>
+                        </div>
+                        <div class="cert-actions">
+                            <button class="btn btn-outline btn-sm open-gallery" data-cert-index="4"><i class="fa-solid fa-image"></i> View Document</button>
+                        </div>
+                    </div>
+
+                    <!-- Cert 6 -->
+                    <div class="cert-card glass-card scroll-reveal">
+                        <div class="cert-badge-icon"><i class="fa-brands fa-python"></i></div>
+                        <div class="cert-info">
+                            <h3 class="cert-name">Python Scripting for Information Security & Automation</h3>
+                            <p class="cert-issuer">Academic Accreditation</p>
+                        </div>
+                        <div class="cert-actions">
+                            <button class="btn btn-outline btn-sm open-gallery" data-cert-index="5"><i class="fa-solid fa-image"></i> View Document</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Horizontal scrolling gallery of certificates -->
+                <div class="cert-gallery-box glass-card">
+                    <h3 class="gallery-title"><i class="fa-solid fa-folder-open text-green"></i> Verification Credentials Files</h3>
+                    <p class="gallery-subtitle">Click on any thumbnail below to display it in the secure fullscreen reader</p>
+                    <div class="cert-thumbnails" id="cert-thumbnails-container">
+                        <!-- Loaded dynamically via JavaScript -->
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact section" id="contact">
+            <h2 class="section-title">Establish Connection</h2>
+            <span class="section-subtitle">Secure Communication Channel</span>
+
+            <div class="contact-container container grid">
+                
+                <!-- Contact Info -->
+                <div class="contact-info-panel glass-card scroll-reveal">
+                    <h3>Contact Matrix</h3>
+                    <p>Have an opening or project you'd like to discuss? Send a ping through the secure form or use my direct coordinates.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-detail-item">
+                            <i class="fa-solid fa-envelope text-green"></i>
+                            <div>
+                                <h4>Direct Mail</h4>
+                                <a href="mailto:mohzag615@gmail.com">mohzag615@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-detail-item">
+                            <i class="fa-solid fa-phone text-green"></i>
+                            <div>
+                                <h4>Secure Phone</h4>
+                                <a href="tel:+962799919621">+962 799919621</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-detail-item">
+                            <i class="fa-solid fa-location-dot text-green"></i>
+                            <div>
+                                <h4>HQ Location</h4>
+                                <span>Tafilah, Jordan</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-social-footer">
+                        <a href="https://linkedin.com/in/mohammad-al-zaghameem" target="_blank" class="social-icon" aria-label="LinkedIn Profile"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://github.com/Dalcots" target="_blank" class="social-icon" aria-label="GitHub Profile"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-panel glass-card scroll-reveal">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group grid">
+                            <div class="input-container">
+                                <label for="form-name">Caller Name</label>
+                                <input type="text" id="form-name" required placeholder="John Doe">
+                            </div>
+                            <div class="input-container">
+                                <label for="form-email">Sender Email</label>
+                                <input type="email" id="form-email" required placeholder="john@example.com">
+                            </div>
+                        </div>
+
+                        <div class="input-container">
+                            <label for="form-subject">Transmission Subject</label>
+                            <input type="text" id="form-subject" required placeholder="SOC Team Recruitment">
+                        </div>
+
+                        <div class="input-container">
+                            <label for="form-message">Encrypted Payload (Message)</label>
+                            <textarea id="form-message" required placeholder="Write your message here..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary form-submit" id="form-submit-btn">
+                            <i class="fa-solid fa-lock"></i> Encrypt & Transmit
+                        </button>
+                    </form>
+                    
+                    <!-- Simulated Cryptographic Logger -->
+                    <div class="form-terminal-logger" id="form-logger">
+                        <div class="logger-line" id="logger-status">Ready for transmission.</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container container">
+            <p class="footer-copy">&copy; 2026 Mohammad Al-Zaghameem. All rights reserved.</p>
+            <div class="footer-status"><i class="fa-solid fa-shield-halved text-green"></i> SSL | SHA-256 Encrypted Profile</div>
+        </div>
+    </footer>
+
+    <!-- Fullscreen Lightbox Modal -->
+    <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Close credentials preview">&times;</button>
+        <button class="lightbox-arrow prev" id="lightbox-prev" aria-label="Previous credential">&#10094;</button>
+        <button class="lightbox-arrow next" id="lightbox-next" aria-label="Next credential">&#10095;</button>
+        
+        <div class="lightbox-content">
+            <div class="lightbox-media-container" id="lightbox-media-container">
+                <!-- Image or PDF Embed loaded via JS -->
+            </div>
+            <div class="lightbox-caption" id="lightbox-caption">Credential Preview</div>
+        </div>
+    </div>
+
+    <!-- Project Details Modal -->
+    <div class="project-modal" id="project-modal" aria-hidden="true" role="dialog">
+        <div class="project-modal-container glass-card">
+            <button class="project-modal-close" id="project-modal-close" aria-label="Close project details">&times;</button>
+            <h3 class="modal-project-title" id="modal-project-title">Project Details</h3>
+            <span class="modal-project-tag" id="modal-project-tag">Forensics</span>
+            <div class="project-modal-body" id="project-modal-body">
+                <!-- Injected via JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="index.js"></script>
+</body>
+</html>
