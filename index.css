@@ -6,12 +6,12 @@
 :root {
     --header-height: 3.5rem;
     
-    /* Color Palette */
+    /* Color Palette - Dark Theme (Default) */
     --bg-color: #0b0f19;
     --bg-color-alt: #111827;
     --card-bg: rgba(17, 24, 39, 0.7);
-    --card-border: rgba(0, 180, 216, 0.15);
-    --card-border-active: rgba(0, 180, 216, 0.5);
+    --card-border: rgba(255, 255, 255, 0.08);
+    --card-border-active: #00b4d8;
     
     --primary-color: #00b4d8; /* Professional Cyan/Blue */
     --primary-glow: rgba(0, 180, 216, 0.25);
@@ -42,8 +42,29 @@
 
     /* Transition & Shadows */
     --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    --cyber-shadow: 0 0 15px var(--primary-glow);
-    --cyber-shadow-hover: 0 0 25px var(--primary-glow-heavy);
+    --cyber-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    --cyber-shadow-hover: 0 10px 30px rgba(0, 180, 216, 0.15);
+}
+
+/* Light Theme */
+body.light-theme {
+    --bg-color: #f8fafc; /* Slate-50 */
+    --bg-color-alt: #ffffff;
+    --card-bg: #ffffff;
+    --card-border: rgba(15, 23, 42, 0.08);
+    --card-border-active: #1c5091; /* Sidebar blue */
+    
+    --primary-color: #1c5091;
+    --primary-glow: rgba(28, 80, 145, 0.15);
+    --primary-glow-heavy: rgba(28, 80, 145, 0.3);
+    --secondary-color: #153c6e;
+    --text-color: #334155; /* Slate-700 */
+    --text-color-light: #64748b; /* Slate-500 */
+    --title-color: #0f172a; /* Slate-900 */
+    --dim-green: #e2e8f0;
+    
+    --cyber-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
+    --cyber-shadow-hover: 0 10px 30px rgba(28, 80, 145, 0.1);
 }
 
 @media screen and (min-width: 576px) {
@@ -91,6 +112,7 @@ body {
     font-size: var(--normal-font-size);
     overflow-x: hidden;
     line-height: 1.6;
+    transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 h1, h2, h3, h4 {
@@ -130,36 +152,8 @@ img, iframe {
 /* ----------------------------------------------------
    THEMATIC CYBERNETIC DECORATIONS
 ------------------------------------------------------- */
-.cyber-grid {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: 
-        linear-gradient(rgba(0, 180, 216, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 180, 216, 0.03) 1px, transparent 1px);
-    background-size: 30px 30px;
-    z-index: -2;
-    pointer-events: none;
-}
-
-.cyber-scanline {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: rgba(0, 180, 216, 0.06);
-    opacity: 0.8;
-    z-index: 1000;
-    pointer-events: none;
-    animation: scanline 8s linear infinite;
-}
-
-@keyframes scanline {
-    0% { top: -5%; }
-    100% { top: 105%; }
+.cyber-grid, .cyber-scanline {
+    display: none !important;
 }
 
 /* Scroll Fade Animation Helper */
@@ -477,6 +471,24 @@ img, iframe {
 
 .nav-link:hover::before, .nav-link.active-link::before {
     width: 100%;
+}
+
+.theme-toggle {
+    background: transparent;
+    border: none;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+    color: var(--secondary-color);
 }
 
 .nav-actions {
@@ -1834,15 +1846,11 @@ img, iframe {
     }
     
     .home-display {
-        align-items: flex-end;
+        align-items: center;
     }
 
     .profile-frame {
         width: 280px;
         height: 280px;
-    }
-    
-    .terminal-widget {
-        max-width: 480px;
     }
 }

@@ -6,6 +6,36 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     /* ====================================================
+       THEME SWITCHER (LIGHT/DARK MODE)
+       ==================================================== */
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeToggleIcon = themeToggleBtn ? themeToggleBtn.querySelector('i') : null;
+    
+    // Check local storage for preference
+    const savedTheme = localStorage.getItem('portfolio-theme');
+    if (savedTheme === 'light') {
+        document.body.classList.add('light-theme');
+        if (themeToggleIcon) themeToggleIcon.className = 'fa-solid fa-sun';
+    } else {
+        document.body.classList.remove('light-theme');
+        if (themeToggleIcon) themeToggleIcon.className = 'fa-solid fa-moon';
+    }
+
+    if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('light-theme');
+            const isLight = document.body.classList.contains('light-theme');
+            localStorage.setItem('portfolio-theme', isLight ? 'light' : 'dark');
+            
+            if (isLight) {
+                themeToggleIcon.className = 'fa-solid fa-sun';
+            } else {
+                themeToggleIcon.className = 'fa-solid fa-moon';
+            }
+        });
+    }
+
+    /* ====================================================
        NAVIGATION HEADER EFFECTS & MOBILE MENU
        ==================================================== */
     const header = document.getElementById('header');
@@ -208,7 +238,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     break;
                 case 'cv':
                     printLine('Payload: mohammad_cv.pdf');
-                    printLine('<a href="assets/mohammad_cv.pdf?v=2.6" download class="text-green"><i class="fa-solid fa-file-arrow-down"></i> [CLICK TO DOWNLOAD RESUME]</a>');
+                    printLine('<a href="assets/mohammad_cv.pdf?v=3.0" download class="text-green"><i class="fa-solid fa-file-arrow-down"></i> [CLICK TO DOWNLOAD RESUME]</a>');
                     break;
                 case 'clear':
                     terminalOutput.innerHTML = '';

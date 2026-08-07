@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="index.css?v=2.6">
+    <link rel="stylesheet" href="index.css?v=3.0">
 </head>
 <body>
 
@@ -33,23 +33,26 @@
     <header class="header" id="header">
         <div class="nav-container">
             <a href="#" class="nav-logo">
-                <span class="logo-accent">&lt;</span>M.ZAGHAMEEM<span class="logo-accent"> /&gt;</span>
+                <span class="logo-accent">M.</span>ZAGHAMEEM
             </a>
             
             <nav class="nav-menu" id="nav-menu">
                 <ul class="nav-list">
-                    <li><a href="#home" class="nav-link active-link"><i class="fa-solid fa-house-terminal"></i> Home</a></li>
-                    <li><a href="#about" class="nav-link"><i class="fa-solid fa-shield-halved"></i> About</a></li>
-                    <li><a href="#experience" class="nav-link"><i class="fa-solid fa-timeline"></i> Experience</a></li>
-                    <li><a href="#skills" class="nav-link"><i class="fa-solid fa-brain"></i> Skills</a></li>
-                    <li><a href="#projects" class="nav-link"><i class="fa-solid fa-code-branch"></i> Projects</a></li>
+                    <li><a href="#home" class="nav-link active-link"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li><a href="#about" class="nav-link"><i class="fa-solid fa-user"></i> About</a></li>
+                    <li><a href="#experience" class="nav-link"><i class="fa-solid fa-briefcase"></i> Experience</a></li>
+                    <li><a href="#skills" class="nav-link"><i class="fa-solid fa-gear"></i> Skills</a></li>
+                    <li><a href="#projects" class="nav-link"><i class="fa-solid fa-code"></i> Projects</a></li>
                     <li><a href="#certifications" class="nav-link"><i class="fa-solid fa-award"></i> Certifications</a></li>
                     <li><a href="#contact" class="nav-link"><i class="fa-solid fa-envelope"></i> Contact</a></li>
                 </ul>
             </nav>
 
             <div class="nav-actions">
-                <a href="assets/mohammad_cv.pdf?v=2.6" class="btn btn-outline" download="Mohammad_Al-Zaghameem_CV.pdf">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <a href="assets/mohammad_cv.pdf?v=3.0" class="btn btn-outline" download="Mohammad_Al-Zaghameem_CV.pdf">
                     <i class="fa-solid fa-file-pdf"></i> Resume
                 </a>
                 <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu">
@@ -90,33 +93,9 @@
                 </div>
 
                 <div class="home-display">
-                    <!-- Profile Picture with Cyber Glow -->
+                    <!-- Profile Picture -->
                     <div class="profile-frame">
-                        <div class="profile-glow"></div>
                         <img src="assets/profile_circle.png" alt="Mohammad Al-Zaghameem Profile Photo" class="profile-img">
-                    </div>
-
-                    <!-- Interactive Cybersecurity Terminal -->
-                    <div class="terminal-widget">
-                        <div class="terminal-header">
-                            <span class="terminal-btn red"></span>
-                            <span class="terminal-btn yellow"></span>
-                            <span class="terminal-btn green"></span>
-                            <span class="terminal-title">guest@mz-cyber-core:~</span>
-                        </div>
-                        <div class="terminal-body" id="terminal-body">
-                            <div class="terminal-line text-green">Type 'help' to view available secure commands.</div>
-                            <div class="terminal-output" id="terminal-output">
-                                <div class="terminal-line"><span class="prompt">guest@mz-cyber-core:~$</span> system_init --verbose</div>
-                                <div class="terminal-line text-dim">Initializing security modules... Done.</div>
-                                <div class="terminal-line text-dim">Loading CV data matrix... Done.</div>
-                                <div class="terminal-line text-green">System status: SECURE. No anomalies detected.</div>
-                            </div>
-                            <div class="terminal-input-line">
-                                <span class="prompt">guest@mz-cyber-core:~$</span>
-                                <input type="text" class="terminal-input" id="terminal-input" placeholder="" autofocus autocomplete="off" spellcheck="false">
-                            </div>
-                        </div>
                     </div>
                 </div>
 
@@ -676,6 +655,6 @@
     </div>
 
     <!-- Custom JS -->
-    <script src="index.js?v=2.6"></script>
+    <script src="index.js?v=3.0"></script>
 </body>
 </html>
