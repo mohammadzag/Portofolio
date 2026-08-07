@@ -45,6 +45,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Close menu when clicking outside of it
+    document.addEventListener('click', (e) => {
+        if (navMenu && navMenu.classList.contains('show-menu') && 
+            navToggle && !navToggle.contains(e.target) && !navMenu.contains(e.target)) {
+            navMenu.classList.remove('show-menu');
+            navToggle.querySelector('i').className = 'fa-solid fa-bars';
+        }
+    });
+
     // Scroll active link tracking
     const sections = document.querySelectorAll('section[id]');
     window.addEventListener('scroll', () => {
