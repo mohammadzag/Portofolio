@@ -238,7 +238,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     break;
                 case 'cv':
                     printLine('Payload: mohammad_cv.pdf');
-                    printLine('<a href="assets/mohammad_cv.pdf?v=3.6" download class="text-green"><i class="fa-solid fa-file-arrow-down"></i> [CLICK TO DOWNLOAD RESUME]</a>');
+                    printLine('<a href="assets/mohammad_cv.pdf?v=4.0" download class="text-green"><i class="fa-solid fa-file-arrow-down"></i> [CLICK TO DOWNLOAD RESUME]</a>');
                     break;
                 case 'clear':
                     terminalOutput.innerHTML = '';
@@ -577,75 +577,47 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-
     /* ====================================================
-       CRYPTOGRAPHIC FORM TRANSMISSION LOGGER
+       STANDARD CONTACT FORM SUBMISSION HANDLER
        ==================================================== */
     const contactForm = document.getElementById('contact-form');
-    const formLogger = document.getElementById('form-logger');
-    const loggerStatus = document.getElementById('logger-status');
     const submitBtn = document.getElementById('form-submit-btn');
+    const successMsg = document.getElementById('form-success-msg');
 
-    if (contactForm && formLogger && loggerStatus && submitBtn) {
+    if (contactForm && submitBtn) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
 
-            const callerName = document.getElementById('form-name').value;
-            const callerEmail = document.getElementById('form-email').value;
-            const callerSubject = document.getElementById('form-subject').value;
-
-            // Start logger animation simulation
+            // Visual feedback: disable form and show loading spinner
+            const originalBtnContent = submitBtn.innerHTML;
             submitBtn.disabled = true;
-            contactForm.style.opacity = '0.5';
+            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+            contactForm.style.opacity = '0.7';
             contactForm.style.pointerEvents = 'none';
 
-            function updateLog(text, isSuccess = false, isLoading = false) {
-                const line = document.createElement('div');
-                line.className = `logger-line ${isSuccess ? 'success' : ''} ${isLoading ? 'loading' : ''}`;
-                line.innerHTML = `[${new Date().toLocaleTimeString()}] ${text}`;
-                formLogger.appendChild(line);
-                formLogger.scrollTop = formLogger.scrollHeight;
-            }
-
-            // Step 1: Input Validation
-            updateLog(`Incoming transmission from ${callerName} (${callerEmail})...`);
-            updateLog(`Verifying authentication tokens & validating payload formats...`, false, true);
-
+            // Simulate server network dispatch
             setTimeout(() => {
-                // Step 2: Encrypting
-                updateLog(`Input fields validated successfully.`, true);
-                updateLog(`Encrypting communication packet...`);
-                updateLog(`Generating 256-bit AES cryptographic session key...`, false, true);
-
+                // Restore form states
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnContent;
+                contactForm.style.opacity = '1';
+                contactForm.style.pointerEvents = 'auto';
+                
+                // Show inline success message
+                if (successMsg) {
+                    successMsg.style.display = 'flex';
+                }
+                
+                // Reset form fields
+                contactForm.reset();
+                
+                // Fade out success banner after 5 seconds
                 setTimeout(() => {
-                    updateLog(`Payload cipher text blocks created: AES-256-CBC mode active.`, true);
-                    updateLog(`Establishing TCP secure handshake with SMTP gateway...`, false, true);
-
-                    setTimeout(() => {
-                        updateLog(`Secure SSL/TLS channel configured. Tunnel: open.`, true);
-                        updateLog(`Transmitting cipher block stream packets...`);
-                        updateLog(`Sending subject: "${callerSubject}"...`, false, true);
-
-                        setTimeout(() => {
-                            // Step 4: Finished
-                            updateLog(`Data packet transmitted successfully to SMTP server destination!`, true);
-                            updateLog(`SYSTEM RESPONSE: [200 OK] Connection closed securely.`, true);
-                            
-                            // Reset form elements
-                            contactForm.reset();
-                            contactForm.style.opacity = '1';
-                            contactForm.style.pointerEvents = 'auto';
-                            submitBtn.disabled = false;
-                            
-                            // Display final feedback popup or alert
-                            alert("Message transmitted securely! Mohammad will respond shortly.");
-                        }, 1200);
-
-                    }, 1200);
-
-                }, 1000);
-
-            }, 1000);
+                    if (successMsg) {
+                        successMsg.style.display = 'none';
+                    }
+                }, 5000);
+            }, 1200);
         });
     }
 

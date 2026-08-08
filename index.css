@@ -1511,28 +1511,16 @@ img, iframe {
     width: 100%;
 }
 
-.form-terminal-logger {
-    margin-top: 1rem;
-    background: #030605;
-    border: 1px solid rgba(0, 180, 216, 0.1);
-    border-radius: 4px;
-    padding: 0.5rem 1rem;
-    min-height: 2.2rem;
-    font-family: var(--mono-font);
-    font-size: var(--smaller-font-size);
-}
-
-.logger-line {
-    color: var(--text-color-light);
-}
-
-.logger-line.success {
+.form-success-msg {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 8px;
+    background: rgba(0, 180, 216, 0.08);
+    border: 1px solid var(--primary-color);
     color: var(--primary-color);
-    text-shadow: 0 0 4px var(--primary-glow);
-}
-
-.logger-line.loading {
-    color: var(--secondary-color);
+    align-items: center;
+    gap: 0.5rem;
+    font-size: var(--small-font-size);
 }
 
 /* ----------------------------------------------------
