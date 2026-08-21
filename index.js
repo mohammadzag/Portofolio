@@ -238,7 +238,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     break;
                 case 'cv':
                     printLine('Payload: mohammad_cv.pdf');
-                    printLine('<a href="assets/mohammad_cv.pdf?v=5.0" download class="text-green"><i class="fa-solid fa-file-arrow-down"></i> [CLICK TO DOWNLOAD RESUME]</a>');
+                    printLine('<a href="assets/mohammad_cv.pdf?v=5.1" download class="text-green"><i class="fa-solid fa-file-arrow-down"></i> [CLICK TO DOWNLOAD RESUME]</a>');
                     break;
                 case 'clear':
                     terminalOutput.innerHTML = '';
