@@ -94,7 +94,7 @@ def generate_pdf(output_dir=r"c:\Users\mohaz\OneDrive\Desktop\CV"):
     pdf.cell(120, 5, "Bachelor of Science in Cybersecurity")
     pdf.set_font("helvetica", "B", 9)
     pdf.set_text_color(20, 50, 100)
-    pdf.cell(60, 5, "August 2026 (Expected)", align="R", new_x="LMARGIN", new_y="NEXT")
+    pdf.cell(60, 5, "September 2026", align="R", new_x="LMARGIN", new_y="NEXT")
     
     pdf.set_font("helvetica", "I", 9)
     pdf.set_text_color(80, 80, 80)
@@ -109,28 +109,7 @@ def generate_pdf(output_dir=r"c:\Users\mohaz\OneDrive\Desktop\CV"):
     # ----------------------------------------------------
     add_section_header("PROFESSIONAL EXPERIENCE")
     
-    # Job 1 - Teacher at Erweam Secondary School for Boys
-    pdf.set_font("helvetica", "B", 9.5)
-    pdf.set_text_color(30, 30, 30)
-    pdf.cell(120, 5, "Computer & Digital Skills Teacher")
-    pdf.set_font("helvetica", "B", 9)
-    pdf.set_text_color(20, 50, 100)
-    pdf.cell(60, 5, "August 2026 - Present", align="R", new_x="LMARGIN", new_y="NEXT")
-    
-    pdf.set_font("helvetica", "I", 9)
-    pdf.set_text_color(80, 80, 80)
-    pdf.cell(0, 4, "Erweam Secondary School for Boys - Tafilah, Jordan", new_x="LMARGIN", new_y="NEXT")
-    
-    pdf.set_font("helvetica", "", 8.8)
-    pdf.set_text_color(60, 60, 60)
-    pdf.multi_cell(0, 3.8, (
-        "- Instruct and mentor students from 7th to 12th grade in digital skills, computer fundamentals, and IT literacy.\n"
-        "- Deliver structured curricula covering operating systems, basic programming logic, software tools, and cyber safety.\n"
-        "- Design and supervise practical computer lab sessions, evaluate student performance, and foster technical problem-solving."
-    ))
-    pdf.ln(1)
-
-    # Job 2 - Cybersecurity Trainee at NCSC
+    # Job 1 - Cybersecurity Trainee at NCSC
     pdf.set_font("helvetica", "B", 9.5)
     pdf.set_text_color(30, 30, 30)
     pdf.cell(120, 5, "Cybersecurity Trainee")
@@ -151,7 +130,7 @@ def generate_pdf(output_dir=r"c:\Users\mohaz\OneDrive\Desktop\CV"):
     ))
     pdf.ln(1)
 
-    # Job 3 - Undergraduate Teaching Assistant at TTU
+    # Job 2 - Undergraduate Teaching Assistant at TTU
     pdf.set_font("helvetica", "B", 9.5)
     pdf.set_text_color(30, 30, 30)
     pdf.cell(120, 5, "Undergraduate Teaching Assistant")
@@ -175,7 +154,7 @@ def generate_pdf(output_dir=r"c:\Users\mohaz\OneDrive\Desktop\CV"):
     pdf.cell(0, 4.2, "  [Click Here for Work Verification Document]", link="https://drive.google.com/file/d/1bM5O8yuzZcZbu1r3CI7-i-38e5yR0klt/view", new_x="LMARGIN", new_y="NEXT")
     pdf.ln(1)
 
-    # Job 4 - Co-Founder Jordan Cybersecurity Club
+    # Job 3 - Co-Founder Jordan Cybersecurity Club
     pdf.set_font("helvetica", "B", 9.5)
     pdf.set_text_color(30, 30, 30)
     pdf.cell(120, 5, "Co-Founder")
@@ -193,6 +172,27 @@ def generate_pdf(output_dir=r"c:\Users\mohaz\OneDrive\Desktop\CV"):
         "- Co-established a collaborative network bridging academic curricula with real-world security sector competencies.\n"
         "- Organized and hosted community-driven digital literacy workshops, local Capture the Flag (CTF) events, and secure coding bootcamps.\n"
         "- Developed curricula and delivered hands-on instruction in Python scripting and basic cybersecurity foundations."
+    ))
+    pdf.ln(1)
+
+    # Job 4 - Teacher at Erweam Secondary School for Boys (Green highlighted section)
+    pdf.set_font("helvetica", "B", 9.5)
+    pdf.set_text_color(30, 30, 30)
+    pdf.cell(120, 5, "Computer & Digital Skills Teacher")
+    pdf.set_font("helvetica", "B", 9)
+    pdf.set_text_color(20, 50, 100)
+    pdf.cell(60, 5, "August 2026 - Present", align="R", new_x="LMARGIN", new_y="NEXT")
+    
+    pdf.set_font("helvetica", "I", 9)
+    pdf.set_text_color(80, 80, 80)
+    pdf.cell(0, 4, "Erweam Secondary School for Boys - Tafilah, Jordan", new_x="LMARGIN", new_y="NEXT")
+    
+    pdf.set_font("helvetica", "", 8.8)
+    pdf.set_text_color(60, 60, 60)
+    pdf.multi_cell(0, 3.8, (
+        "- Instruct and mentor students from 7th to 12th grade in digital skills, computer fundamentals, and IT literacy.\n"
+        "- Deliver structured curricula covering operating systems, basic programming logic, software tools, and cyber safety.\n"
+        "- Design and supervise practical computer lab sessions, evaluate student performance, and foster technical problem-solving."
     ))
 
     # Add page 2
