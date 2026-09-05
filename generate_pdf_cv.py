@@ -105,32 +105,11 @@ def generate_pdf(output_dir=r"c:\Users\mohaz\OneDrive\Desktop\CV"):
     pdf.cell(0, 4, "Relevant Coursework: Infrastructure Security, Network Security, Operating Systems, Cryptography, Digital Forensics, Database Security", new_x="LMARGIN", new_y="NEXT")
 
     # ----------------------------------------------------
-    # PROFESSIONAL EXPERIENCE
+    # PROFESSIONAL EXPERIENCE (OLDEST TO NEWEST)
     # ----------------------------------------------------
     add_section_header("PROFESSIONAL EXPERIENCE")
     
-    # Job 1 - Cybersecurity Trainee at NCSC
-    pdf.set_font("helvetica", "B", 9.5)
-    pdf.set_text_color(30, 30, 30)
-    pdf.cell(120, 5, "Cybersecurity Trainee")
-    pdf.set_font("helvetica", "B", 9)
-    pdf.set_text_color(20, 50, 100)
-    pdf.cell(60, 5, "2025", align="R", new_x="LMARGIN", new_y="NEXT")
-    
-    pdf.set_font("helvetica", "I", 9)
-    pdf.set_text_color(80, 80, 80)
-    pdf.cell(0, 4, "National Cybersecurity Center (NCSC) - Amman, Jordan", new_x="LMARGIN", new_y="NEXT")
-    
-    pdf.set_font("helvetica", "", 8.8)
-    pdf.set_text_color(60, 60, 60)
-    pdf.multi_cell(0, 3.8, (
-        "- Participated in intensive cybersecurity training modules focused on Critical National Infrastructure (CNI) defense.\n"
-        "- Acquired practical experience in real-time threat evaluation, vulnerability assessments, and incident response mitigation.\n"
-        "- Monitored live network traffic metrics utilizing enterprise tools to isolate anomalous Active Directory and endpoint footprints."
-    ))
-    pdf.ln(1)
-
-    # Job 2 - Undergraduate Teaching Assistant at TTU
+    # Job 1 (2024 - 2026): Undergraduate Teaching Assistant at TTU
     pdf.set_font("helvetica", "B", 9.5)
     pdf.set_text_color(30, 30, 30)
     pdf.cell(120, 5, "Undergraduate Teaching Assistant")
@@ -154,7 +133,7 @@ def generate_pdf(output_dir=r"c:\Users\mohaz\OneDrive\Desktop\CV"):
     pdf.cell(0, 4.2, "  [Click Here for Work Verification Document]", link="https://drive.google.com/file/d/1bM5O8yuzZcZbu1r3CI7-i-38e5yR0klt/view", new_x="LMARGIN", new_y="NEXT")
     pdf.ln(1)
 
-    # Job 3 - Co-Founder Jordan Cybersecurity Club
+    # Job 2 (2024 - Present): Co-Founder Jordan Cybersecurity Club
     pdf.set_font("helvetica", "B", 9.5)
     pdf.set_text_color(30, 30, 30)
     pdf.cell(120, 5, "Co-Founder")
@@ -175,7 +154,28 @@ def generate_pdf(output_dir=r"c:\Users\mohaz\OneDrive\Desktop\CV"):
     ))
     pdf.ln(1)
 
-    # Job 4 - Teacher at Erweam Secondary School for Boys (Green highlighted section)
+    # Job 3 (2025): Cybersecurity Trainee at NCSC
+    pdf.set_font("helvetica", "B", 9.5)
+    pdf.set_text_color(30, 30, 30)
+    pdf.cell(120, 5, "Cybersecurity Trainee")
+    pdf.set_font("helvetica", "B", 9)
+    pdf.set_text_color(20, 50, 100)
+    pdf.cell(60, 5, "2025", align="R", new_x="LMARGIN", new_y="NEXT")
+    
+    pdf.set_font("helvetica", "I", 9)
+    pdf.set_text_color(80, 80, 80)
+    pdf.cell(0, 4, "National Cybersecurity Center (NCSC) - Amman, Jordan", new_x="LMARGIN", new_y="NEXT")
+    
+    pdf.set_font("helvetica", "", 8.8)
+    pdf.set_text_color(60, 60, 60)
+    pdf.multi_cell(0, 3.8, (
+        "- Participated in intensive cybersecurity training modules focused on Critical National Infrastructure (CNI) defense.\n"
+        "- Acquired practical experience in real-time threat evaluation, vulnerability assessments, and incident response mitigation.\n"
+        "- Monitored live network traffic metrics utilizing enterprise tools to isolate anomalous Active Directory and endpoint footprints."
+    ))
+    pdf.ln(1)
+
+    # Job 4 (August 2026 - Present): Teacher at Erweam Secondary School for Boys
     pdf.set_font("helvetica", "B", 9.5)
     pdf.set_text_color(30, 30, 30)
     pdf.cell(120, 5, "Computer & Digital Skills Teacher")
