@@ -394,6 +394,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // We map our files list in assets/certificates/
     const certificatesList = [
         {
+            filename: 'ttu_cybersecurity_degree.png',
+            title: 'B.Sc. in Cybersecurity Degree Certificate (Very Good - 76.47%)',
+            issuer: 'Tafila Technical University (TTU)',
+            type: 'image'
+        },
+        {
             filename: 'certificate-ay78f2mpnxt8-1785585074.pdf',
             title: 'Claude Code in Action Certificate of Completion',
             issuer: 'Anthropic',
