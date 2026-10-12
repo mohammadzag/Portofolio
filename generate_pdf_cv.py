@@ -23,7 +23,7 @@ def generate_pdf(output_dir=r"c:\Users\mohaz\OneDrive\Desktop\CV"):
     # ----------------------------------------------------
     pdf.set_font("helvetica", "B", 18)
     pdf.set_text_color(20, 50, 100) # Professional dark blue for name
-    pdf.cell(0, 8, "MOHAMMAD AL-ZAGHAMEEM", new_x="LMARGIN", new_y="NEXT", align="C")
+    pdf.cell(0, 8, "MOHAMMAD AL-ZAGHAMIM", new_x="LMARGIN", new_y="NEXT", align="C")
     
     pdf.set_font("helvetica", "B", 9.5)
     pdf.set_text_color(80, 80, 80)
@@ -105,11 +105,74 @@ def generate_pdf(output_dir=r"c:\Users\mohaz\OneDrive\Desktop\CV"):
     pdf.cell(0, 4, "Relevant Coursework: Infrastructure Security, Network Security, Operating Systems, Cryptography, Digital Forensics, Database Security", new_x="LMARGIN", new_y="NEXT")
 
     # ----------------------------------------------------
-    # PROFESSIONAL EXPERIENCE (OLDEST TO NEWEST)
+    # PROFESSIONAL EXPERIENCE (NEWEST TO OLDEST)
     # ----------------------------------------------------
     add_section_header("PROFESSIONAL EXPERIENCE")
     
-    # Job 1 (2024 - 2026): Undergraduate Teaching Assistant at TTU
+    # Job 1 (August 2026 - Present): Teacher at Erweam Secondary School for Boys
+    pdf.set_font("helvetica", "B", 9.5)
+    pdf.set_text_color(30, 30, 30)
+    pdf.cell(120, 5, "Computer & Digital Skills Teacher")
+    pdf.set_font("helvetica", "B", 9)
+    pdf.set_text_color(20, 50, 100)
+    pdf.cell(60, 5, "August 2026 - Present", align="R", new_x="LMARGIN", new_y="NEXT")
+    
+    pdf.set_font("helvetica", "I", 9)
+    pdf.set_text_color(80, 80, 80)
+    pdf.cell(0, 4, "Erweam Secondary School for Boys - Tafilah, Jordan", new_x="LMARGIN", new_y="NEXT")
+    
+    pdf.set_font("helvetica", "", 8.8)
+    pdf.set_text_color(60, 60, 60)
+    pdf.multi_cell(0, 3.8, (
+        "- Instruct and mentor students from 7th to 12th grade in digital skills, computer fundamentals, and IT literacy.\n"
+        "- Deliver structured curricula covering operating systems, basic programming logic, software tools, and cyber safety.\n"
+        "- Design and supervise practical computer lab sessions, evaluate student performance, and foster technical problem-solving."
+    ))
+    pdf.ln(1)
+
+    # Job 2 (2025): Cybersecurity Trainee at NCSC
+    pdf.set_font("helvetica", "B", 9.5)
+    pdf.set_text_color(30, 30, 30)
+    pdf.cell(120, 5, "Cybersecurity Trainee")
+    pdf.set_font("helvetica", "B", 9)
+    pdf.set_text_color(20, 50, 100)
+    pdf.cell(60, 5, "2025", align="R", new_x="LMARGIN", new_y="NEXT")
+    
+    pdf.set_font("helvetica", "I", 9)
+    pdf.set_text_color(80, 80, 80)
+    pdf.cell(0, 4, "National Cybersecurity Center (NCSC) - Amman, Jordan", new_x="LMARGIN", new_y="NEXT")
+    
+    pdf.set_font("helvetica", "", 8.8)
+    pdf.set_text_color(60, 60, 60)
+    pdf.multi_cell(0, 3.8, (
+        "- Participated in intensive cybersecurity training modules focused on Critical National Infrastructure (CNI) defense.\n"
+        "- Acquired practical experience in real-time threat evaluation, vulnerability assessments, and incident response mitigation.\n"
+        "- Monitored live network traffic metrics utilizing enterprise tools to isolate anomalous Active Directory and endpoint footprints."
+    ))
+    pdf.ln(1)
+
+    # Job 3 (2024 - Present): Co-Founder Jordan Cybersecurity Club
+    pdf.set_font("helvetica", "B", 9.5)
+    pdf.set_text_color(30, 30, 30)
+    pdf.cell(120, 5, "Co-Founder")
+    pdf.set_font("helvetica", "B", 9)
+    pdf.set_text_color(20, 50, 100)
+    pdf.cell(60, 5, "2024 - Present", align="R", new_x="LMARGIN", new_y="NEXT")
+    
+    pdf.set_font("helvetica", "I", 9)
+    pdf.set_text_color(80, 80, 80)
+    pdf.cell(0, 4, "Jordan Cybersecurity Club (JCC) Platform - Jordan", new_x="LMARGIN", new_y="NEXT")
+    
+    pdf.set_font("helvetica", "", 8.8)
+    pdf.set_text_color(60, 60, 60)
+    pdf.multi_cell(0, 3.8, (
+        "- Co-established a collaborative network bridging academic curricula with real-world security sector competencies.\n"
+        "- Organized and hosted community-driven digital literacy workshops, local Capture the Flag (CTF) events, and secure coding bootcamps.\n"
+        "- Developed curricula and delivered hands-on instruction in Python scripting and basic cybersecurity foundations."
+    ))
+    pdf.ln(1)
+
+    # Job 4 (2024 - 2026): Undergraduate Teaching Assistant at TTU
     pdf.set_font("helvetica", "B", 9.5)
     pdf.set_text_color(30, 30, 30)
     pdf.cell(120, 5, "Undergraduate Teaching Assistant")
@@ -131,69 +194,6 @@ def generate_pdf(output_dir=r"c:\Users\mohaz\OneDrive\Desktop\CV"):
     pdf.set_font("helvetica", "B", 8)
     pdf.set_text_color(0, 100, 255)
     pdf.cell(0, 4.2, "  [Click Here for Work Verification Document]", link="https://drive.google.com/file/d/1bM5O8yuzZcZbu1r3CI7-i-38e5yR0klt/view", new_x="LMARGIN", new_y="NEXT")
-    pdf.ln(1)
-
-    # Job 2 (2024 - Present): Co-Founder Jordan Cybersecurity Club
-    pdf.set_font("helvetica", "B", 9.5)
-    pdf.set_text_color(30, 30, 30)
-    pdf.cell(120, 5, "Co-Founder")
-    pdf.set_font("helvetica", "B", 9)
-    pdf.set_text_color(20, 50, 100)
-    pdf.cell(60, 5, "2024 - Present", align="R", new_x="LMARGIN", new_y="NEXT")
-    
-    pdf.set_font("helvetica", "I", 9)
-    pdf.set_text_color(80, 80, 80)
-    pdf.cell(0, 4, "Jordan Cybersecurity Club (JCC) Platform - Jordan", new_x="LMARGIN", new_y="NEXT")
-    
-    pdf.set_font("helvetica", "", 8.8)
-    pdf.set_text_color(60, 60, 60)
-    pdf.multi_cell(0, 3.8, (
-        "- Co-established a collaborative network bridging academic curricula with real-world security sector competencies.\n"
-        "- Organized and hosted community-driven digital literacy workshops, local Capture the Flag (CTF) events, and secure coding bootcamps.\n"
-        "- Developed curricula and delivered hands-on instruction in Python scripting and basic cybersecurity foundations."
-    ))
-    pdf.ln(1)
-
-    # Job 3 (2025): Cybersecurity Trainee at NCSC
-    pdf.set_font("helvetica", "B", 9.5)
-    pdf.set_text_color(30, 30, 30)
-    pdf.cell(120, 5, "Cybersecurity Trainee")
-    pdf.set_font("helvetica", "B", 9)
-    pdf.set_text_color(20, 50, 100)
-    pdf.cell(60, 5, "2025", align="R", new_x="LMARGIN", new_y="NEXT")
-    
-    pdf.set_font("helvetica", "I", 9)
-    pdf.set_text_color(80, 80, 80)
-    pdf.cell(0, 4, "National Cybersecurity Center (NCSC) - Amman, Jordan", new_x="LMARGIN", new_y="NEXT")
-    
-    pdf.set_font("helvetica", "", 8.8)
-    pdf.set_text_color(60, 60, 60)
-    pdf.multi_cell(0, 3.8, (
-        "- Participated in intensive cybersecurity training modules focused on Critical National Infrastructure (CNI) defense.\n"
-        "- Acquired practical experience in real-time threat evaluation, vulnerability assessments, and incident response mitigation.\n"
-        "- Monitored live network traffic metrics utilizing enterprise tools to isolate anomalous Active Directory and endpoint footprints."
-    ))
-    pdf.ln(1)
-
-    # Job 4 (August 2026 - Present): Teacher at Erweam Secondary School for Boys
-    pdf.set_font("helvetica", "B", 9.5)
-    pdf.set_text_color(30, 30, 30)
-    pdf.cell(120, 5, "Computer & Digital Skills Teacher")
-    pdf.set_font("helvetica", "B", 9)
-    pdf.set_text_color(20, 50, 100)
-    pdf.cell(60, 5, "August 2026 - Present", align="R", new_x="LMARGIN", new_y="NEXT")
-    
-    pdf.set_font("helvetica", "I", 9)
-    pdf.set_text_color(80, 80, 80)
-    pdf.cell(0, 4, "Erweam Secondary School for Boys - Tafilah, Jordan", new_x="LMARGIN", new_y="NEXT")
-    
-    pdf.set_font("helvetica", "", 8.8)
-    pdf.set_text_color(60, 60, 60)
-    pdf.multi_cell(0, 3.8, (
-        "- Instruct and mentor students from 7th to 12th grade in digital skills, computer fundamentals, and IT literacy.\n"
-        "- Deliver structured curricula covering operating systems, basic programming logic, software tools, and cyber safety.\n"
-        "- Design and supervise practical computer lab sessions, evaluate student performance, and foster technical problem-solving."
-    ))
 
     # Add page 2
     pdf.add_page()
@@ -309,13 +309,13 @@ def generate_pdf(output_dir=r"c:\Users\mohaz\OneDrive\Desktop\CV"):
     pdf.set_x(15)
     pdf.set_font("helvetica", "B", 9)
     pdf.set_text_color(30, 30, 30)
-    pdf.cell(90, 4.5, "Programming & Automation")
+    pdf.cell(90, 4.5, "Programming & Tools")
     pdf.cell(90, 4.5, "Leadership & Instruction", new_x="LMARGIN", new_y="NEXT")
     
     pdf.set_font("helvetica", "", 8.5)
     pdf.set_text_color(60, 60, 60)
     y_pos = pdf.get_y()
-    pdf.multi_cell(85, 3.8, "- Python (Security Scripts & Automation)\n- C++ Coding Foundations\n- IoT & ESP32 Microcontrollers")
+    pdf.multi_cell(85, 3.8, "- Python (Security Scripts & Automation)\n- Git & GitHub (Version Control & CI/CD)\n- C++ Coding Foundations & IoT (ESP32)")
     
     pdf.set_xy(105, y_pos)
     pdf.multi_cell(85, 3.8, "- Technical Instruction & ToT Methods\n- Workshop & Event Management\n- Public Speaking & Presentation Skills")
@@ -354,7 +354,7 @@ def generate_pdf(output_dir=r"c:\Users\mohaz\OneDrive\Desktop\CV"):
     ))
 
     # Output PDF
-    dest_path = os.path.join(output_dir, "Mohammad_Al-Zaghameem_Cybersecurity_CV_Final.pdf")
+    dest_path = os.path.join(output_dir, "Mohammad_Al-Zaghamim_Cybersecurity_CV_Final.pdf")
     pdf.output(dest_path)
     print(f"Generated CV PDF at: {dest_path}")
     

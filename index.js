@@ -1,5 +1,5 @@
 /* ----------------------------------------------------
-   MOHAMMAD AL-ZAGHAMEEM - CYBERSECURITY PORTFOLIO
+   MOHAMMAD AL-ZAGHAMIM - CYBERSECURITY PORTFOLIO
    Core Javascript Functionality
 ------------------------------------------------------- */
 
@@ -195,7 +195,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     printLine('  <span class="text-green">clear</span>    - Wipe active terminal terminal log');
                     break;
                 case 'about':
-                    printLine('Mohammad Al-Zaghameem - B.Sc in Cybersecurity (Tafila Technical University).');
+                    printLine('Mohammad Al-Zaghamim - B.Sc in Cybersecurity (Tafila Technical University).');
                     printLine('Graduation Expected: August 2026.');
                     printLine('Completed threat analyst training with the National Cybersecurity Center (NCSC).');
                     printLine('Academic Teaching Assistant for Operating Systems (Linux), Discrete Math, and AI.');
